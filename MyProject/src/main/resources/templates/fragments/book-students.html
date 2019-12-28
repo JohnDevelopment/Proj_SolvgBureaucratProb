@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+    <tr>
+        <td colspan="3">Reduceri: <span th:text="${book.name}"/> cu statutul <span th:text="${book.author}"/></td>
+    </tr>
+    <tr>
+        <th>ID</th>
+        <th>Nume Client</th>
+        <th>Redus(%)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="bookStudent : ${bookStudents}">
+        <td th:text="${bookStudent.student.id}" />
+        <td th:text="${bookStudent.student.name}" />
+        <td th:text="${bookStudent.duration}" />
+    </tr>
+    </tbody>
+</table>

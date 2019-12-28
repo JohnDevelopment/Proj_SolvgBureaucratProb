@@ -1,0 +1,51 @@
+<html style="position: relative; min-height: 100%;">
+	<head>
+		<th:block th:include="fragments/header :: head"></th:block>
+	</head>
+
+	<body style="margin-bottom: 120px;">
+		<div class="container">
+			<div class="row">
+				<th:block th:include="fragments/menu :: menu"></th:block>
+	
+				<div class="col-lg-9">
+					<div class="card card-outline-secondary my-4">
+						<div class="card-header">Lista clienților - reducerile produselor înregistrate</div>
+						<div class="card-body">
+							<div class="card card-outline-secondary my-4">
+								<div class="card-header">Înregistrare reducere</div>
+								<div class="card-body">
+									<form method="post" th:object="${newbookstudent}" th:action="@{/student-book/assignbooktostudent}">
+										<div class="form-group">
+											<label th:for="duration">Redus(%):</label>
+											<input class="form-control" th:field="*{duration}" />
+											<select name="student">
+												<option th:each="student: ${students}" th:value="${student.id}" th:text="${student.name}"/>
+											</select>
+
+											<select name="book">
+												<option th:each="book: ${books}" th:value="${book.id}" th:text="${book.name}"/>
+											</select>
+
+											<hr>
+											<div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+												<span th:each="err : ${#fields.errors('*')}" th:text="${err}" />
+											</div>
+										</div>
+
+										<input type="submit" class="btn btn-primary" value="Înregistrare reducere" />
+
+										<hr>
+
+										<div class="alert alert-success" th:if="${#strings.isEmpty(successMessage) == false}" th:text="${successMessage}" />
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<th:block th:include="fragments/footer :: footer"></th:block>
+	</body>
+</html>

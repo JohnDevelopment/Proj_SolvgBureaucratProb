@@ -1,0 +1,38 @@
+<html style="position: relative; min-height: 100%;">
+	<head>
+		<th:block th:include="fragments/header :: head"></th:block>
+	</head>
+
+	<body style="margin-bottom: 120px;">
+		<div class="container">
+			<div class="row">
+				<th:block th:include="fragments/menu :: menu"></th:block>
+	
+				<div class="col-lg-9">
+					<div class="card card-outline-secondary my-4">
+						<div class="card-header">Lista utilizatorilor</div>
+						<div class="card-body">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Nume</th>
+										<th>Actiuni</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="student : ${students}">
+										<td th:text="${student.id}" />
+										<td th:text="${student.name}" />
+										<td><a th:href="@{/students/books/{student_id}(student_id=${student.id})}" rel="modal:open">Afiseaza detalii</a></td>
+									</tr>	
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<th:block th:include="fragments/footer :: footer"></th:block>
+	</body>
+</html>

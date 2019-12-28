@@ -1,0 +1,41 @@
+<div th:fragment="menu">
+	<div class="col-lg-3" th:fragment="menu">
+		<h1 class="my-4">ZÂMBETELE MOLDOVEI</h1>
+		<nav class="navbar navbar-dark bg-primary">
+			<a class="navbar-brand" href="#">MENIU</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a th:href="@{/students}" class="list-group-item" >Lista utilizatorilor</a>
+					</li>
+					<li class="nav-item active">
+						<a th:href="@{/books}" class="list-group-item" >Istoricului activităților</a>
+					</li>
+					<li class="nav-item active">
+						<a th:href="@{/books1}" class="list-group-item" >Statistica sub formă de listă succintă</a>
+					</li>
+					<li class="nav-item active">
+						<a th:href="@{/student-book/statistics}" class="list-group-item" >Statistica sub formă taberară</a>
+					</li>
+					<li class="nav-item active">
+						<a href="D:\Documente\utm\MASTERAT\Laboratoare\ADA si Ptoiectul TI\Projects\2\lucrarecursjava\MyProject\src\main\resources\templates\fragments\statistics1.html" class="list-group-item" >Statistica sub formă grafică</a>
+					</li>
+					<li class="nav-item active">
+						<a th:href="@{/student-book/assignbooktostudent}" class="list-group-item" >Înregistrare reducere</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+<!--
+		<div class="list-group">
+			<a th:href="@{/books}" class="list-group-item" >Afisare Carti</a>
+			<a th:href="@{/students}" class="list-group-item" >Afisare Student</a>
+			<a th:href="@{/student-book/statistics}" class="list-group-item" >Afisare împrumuturi</a>
+			<a th:href="@{/student-book/assignbooktostudent}" class="list-group-item" >Imprumuta</a>
+		</div>
+-->
+	</div>
+</div>
