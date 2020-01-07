@@ -1,1 +1,1 @@
-# Proj_SolvgBureaucratProb - Project for Solving Bureaucratic Problems
+# Proj_SolvgBureaucratProb - Project for Solving Bureaucratic Problems.
